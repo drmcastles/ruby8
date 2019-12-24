@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../company_name.rb'
 
 class Carriage
@@ -30,7 +32,7 @@ class Carriage
   def valid?
     validate!
     true
-  rescue
+  rescue StandardError
     false
   end
 

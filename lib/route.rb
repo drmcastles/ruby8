@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'instance_counter.rb'
 
 class Route
@@ -36,7 +38,7 @@ class Route
   def valid?
     validate!
     true
-  rescue
+  rescue StandardError
     false
   end
 

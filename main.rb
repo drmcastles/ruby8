@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/route.rb'
 require_relative 'lib/station.rb'
 
@@ -28,13 +30,13 @@ class Main
     'Station menu',
     'Train menu',
     'Route menu'
-  ]
+  ].freeze
 
   STATION_MENU = [
     'Create station',
     'View stations',
     'View trains on station'
-  ]
+  ].freeze
 
   TRAIN_MENU = [
     'Create train',
@@ -43,29 +45,29 @@ class Main
     'Cargo / seats reservation',
     'Remove carriage from the train',
     'Move the train'
-  ]
+  ].freeze
 
   ROUTE_MENU = [
     'Create route',
     'Add intermediate station to route',
     'Delete intermediate station from route',
     'View routes'
-  ]
+  ].freeze
 
   TRAIN_TYPE_MENU = [
     'Create cargo train',
     'Create passenger train'
-  ]
+  ].freeze
 
   DIRECTION_MENU = [
     'Go next station',
     'Go previous station'
-  ]
+  ].freeze
 
   CREATE_ROUTE_STATION_MENU = [
     'Add existing station to route',
     'Create a new one and add to route'
-  ]
+  ].freeze
 
   STATIONS_ERROR = 'Create at least one Station!'
   TRAINS_ERROR = 'Create at least one Train!'
@@ -411,4 +413,3 @@ end
 
 main = Main.new
 main.main_menu
-

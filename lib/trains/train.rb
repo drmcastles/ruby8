@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../company_name.rb'
 require_relative '../instance_counter.rb'
 
@@ -15,7 +17,7 @@ class Train
   ROUTE_ERROR = 'No route specified!'
   NEXT_STATION_ERROR = 'There is no next station!'
   PREVIOUS_STATION_ERROR = 'There is no previous station!'
-  NUMBER_FORMAT = /^[a-zа-я\d]{3}-?[a-zа-я\d]{2}$/i
+  NUMBER_FORMAT = /^[a-zа-я\d]{3}-?[a-zа-я\d]{2}$/i.freeze
 
   attr_reader :number, :speed, :route, :carriages
 
@@ -98,7 +100,7 @@ class Train
   def valid?
     validate!
     true
-  rescue
+  rescue StandardError
     false
   end
 

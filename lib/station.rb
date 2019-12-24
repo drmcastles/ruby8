@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'instance_counter.rb'
 
 class Station
@@ -50,7 +52,7 @@ class Station
   def valid?
     validate!
     true
-  rescue
+  rescue StandardError
     false
   end
 
